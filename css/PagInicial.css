@@ -6,7 +6,7 @@
 body{
     background-color: #010006;
     background-image: url(./background.jpg);
-    background-size:83vw 100vh;
+    background-size:100% 100vh;
     background-position: center top;
     background-repeat: no-repeat;
 }
