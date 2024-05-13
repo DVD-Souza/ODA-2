@@ -9,16 +9,18 @@
 </head>
 <body>
     <div class="basebg">
-    <img id="imginicial" src="img/inicial.jpg">
+        <img id="imginicial" src="img/inicial.jpg">
     </div>
     <img id="astrounauta" src="img/astronauta.png">
-        <div class="button-container">
-            <a href="fases.html" class="linkplay">PLAY</a>
-            <a href="#" id="openModalLink" class="linkguias">GUIA</a>
-        </div>
+    <div class="button-container">
+        <button class="linkplay" id="playButton">PLAY</button>
+        <a href="#" id="openModalLink" class="linkguias">GUIA</a>
+    </div>
+    <!-- Lista de fases -->
+    <div class="fases" id="fasesContainer">
+    </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
-        <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
             <p>Some text in the Modal..</p>
@@ -26,6 +28,6 @@
                 <li> O jogador terá 10 segundos para responder cada questão.</li>
             </ul>
         </div>
-    </div>   
+    </div>  
 </body>
 </html>

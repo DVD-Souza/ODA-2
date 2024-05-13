@@ -146,3 +146,7 @@ body {
         padding: 38px;
     }
 }
+
+.fases {
+    display: none;
+}

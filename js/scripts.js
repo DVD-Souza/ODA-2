@@ -23,3 +23,10 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+//Interação das fases
+document.getElementById("playButton").addEventListener("click", function() {
+  document.querySelector(".button-container").style.display = "none";
+  document.getElementById("fasesContainer").style.display = "block";
+  document.getElementById("imginicial").src="img/fases.jpg";
+  document.getElementById("astrounauta").remove();
+});
