@@ -1,14 +1,70 @@
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: #010006;
-    background-image: url(./background.jpg);
-    background-size:100% 100vh;
-    background-position: center top;
-    background-repeat: no-repeat;
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.basebg {
+    border: 8px solid rgba(6, 102, 212, 0.103);
+    border-radius: 20px;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 90%; 
+}
+
+#imginicial{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#astrounauta{
+    width: 60%;
+    left: -22%;
+    position: relative;
+    top: -8rem;
+}
+
+.linkplay,
+.linkguias {
+    position: absolute;
+    left: 40%;  
+    text-align: center; 
+    color: white; 
+    text-decoration: none; 
+    font-size: 20px; 
+    background-color: rgb(0, 6, 27); 
+    border-radius: 30px; 
+    width: 100%; 
+    height: 13%;
+    transition: background-color 0.3s ease;
+}
+
+.linkplay {
+    top: 53%;
+}
+
+.linkguias {
+    top: 68%;
+}
+
+.linkplay:hover,
+.linkguias:hover {
+    background-color: rgba(74, 59, 207, 0.205);
 }
 
 /* The Modal (background) */
@@ -47,4 +103,46 @@ body{
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Tamanho de tela pequeno */
+@media only screen and (max-width: 600px) {
+    .basebg {
+        width: 90%;
+        left: 5%;
+    }
+    
+    .linkplay,
+    .linkguias {
+        width: 200px;
+        padding: 20px;
+    }
+}
+
+/* Tamanho de tela médio */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .basebg {
+        width: 80%;
+        left: 10%;
+    }
+    
+    .linkplay,
+    .linkguias {
+        width: 240px;
+        padding: 28px;
+    }
+}
+
+/* Tamanho de tela grande */
+@media only screen and (min-width: 1025px) {
+    .basebg {
+        width: 70%;
+        left: 15%;
+    }
+    
+    .linkplay,
+    .linkguias {
+        width: 280px;
+        padding: 38px;
+    }
 }
