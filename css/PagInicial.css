@@ -105,6 +105,52 @@ body {
     cursor: pointer;
 }
 
+.linkFase1, 
+.linkFase2,
+.linkFase3,
+.linkFase4  {
+    position: absolute;  
+    font-size: 10px; 
+    background-color: rgba(2, 20, 37, 0.637); 
+    border-radius: 100%; 
+    transition: background-color 0.3s ease;
+    color: #00000000;
+}
+
+.linkFase1{
+    top: 53%;
+    left: 35%; 
+    width: 16%; 
+    height: 30%;
+}
+
+.linkFase2{
+    top: 10%;
+    left: 39%;
+    width: 15%; 
+    height: 30%;
+}
+
+.linkFase3{
+    top: 9%;
+    left: 67%;
+    width: 16%; 
+    height: 30%;
+}
+
+.linkFase4{
+    top: 55%;
+    left: 65%;
+    width: 16%; 
+    height: 30%;
+}
+
+.linkFase1:hover,
+.linkFase2:hover,
+.linkFase3:hover,
+.linkFase4:hover {
+    background-color: rgba(11, 4, 77, 0.233);
+}
 /* Tamanho de tela pequeno */
 @media only screen and (max-width: 600px) {
     .basebg {
