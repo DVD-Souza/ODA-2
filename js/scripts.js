@@ -31,6 +31,7 @@ document.getElementById("playButton").addEventListener("click", function() {
   document.getElementById("fasesContainer").style.display = "block";
   document.getElementById("imginicial").src="img/fases.jpg";
   document.getElementById("astrounauta").remove();
+  document.getElementById("titulo").remove();
 });
 
 linksFase.forEach(function(link) {
