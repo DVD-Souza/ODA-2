@@ -29,7 +29,11 @@ window.onclick = function(event) {
 document.getElementById("playButton").addEventListener("click", function() {
   document.querySelector(".button-container").style.display = "none";
   document.getElementById("fasesContainer").style.display = "block";
-  document.getElementById("imginicial").src="img/fases.jpg";
+  document.getElementById("imginicial").src="img/backgroundfases.jpg";
+  document.getElementById("pluto").src="img/pluto.png";
+  document.getElementById("mercurio").src="img/mercurio.png";
+  document.getElementById("marte").src="img/marte.png";
+  document.getElementById("netuno").src="img/netuno.png";
   document.getElementById("astrounauta").remove();
   document.getElementById("titulo").remove();
 });
