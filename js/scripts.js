@@ -1,3 +1,4 @@
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -159,3 +160,88 @@ btn4.onclick = function(){
 span4.onclick = function() {
   modal4.style.display = "none";
 }
+
+//Logica do quiz
+
+const question = document.getElementById("perguntas");
+const answers = document.getElementById("respostas");
+const qtd = document.getElementById("qtd");
+const txtFinish = document.querySelector(".quiz-control span");
+const content = document.querySelector(".quiz-conteiner");
+const contentFinish = document.querySelector(".quiz-control");
+const btnRestart = document.querySelector(".quiz-control button");
+
+const questions = [
+  {
+    question: "Se a proposição “Se Lucca é responsável, então Sarita dirige bem” é falsa, é possível concluir que",
+    answers: [
+      { option: "Lucca é responsável e Sarita não dirige bem.", correct: true },
+      { option: "Lucca não é responsável e Sarita dirige bem.", correct: false },
+      { option: "Lucca dirige bem e Sarita não é responsável.", correct: false },
+    ],
+  },
+  {
+    question: "Considere verdadeiras as seguintes sentenças simples: p = Maria recebeu a correspondência na sexta-feira. q = Maria protocolou a correspondência na sexta-feira. Assinale a alternativa que apresenta uma sentença composta falsa para (¬p∧q).",
+    answers: [
+      { option: "Maria recebeu ou protocolou a correspondência na sexta-feira.", correct: false },
+      { option: "Maria não recebeu, mas protocolou a correspondência na sexta-feira.", correct: true },
+      { option: "Maria recebeu e protocolou a correspondência na sexta-feira.", correct: false },
+    ],
+  },
+];
+
+let currentIndex = 0;
+let questionsCorrect = 0;
+
+btnRestart.onclick = () => {
+  content.style.display = "flex";
+  contentFinish.style.display = "none";
+
+  currentIndex = 0;
+  questionsCorrect = 0;
+  loadQuestion();
+};
+
+function nextQuestion(event) {
+  if (event.target.getAttribute("data-correct") === "true") {
+    questionsCorrect++;
+  }
+
+  if (currentIndex < questions.length - 1) {
+    currentIndex++;
+    loadQuestion();
+  } else {
+    finish();
+  }
+}
+
+function finish() {
+  txtFinish.innerHTML = `você acertou ${questionsCorrect} de ${questions.length}`;
+  content.style.display = "none";
+  contentFinish.style.display = "flex";
+}
+
+function loadQuestion() {
+  qtd.innerHTML = `${currentIndex + 1}/${questions.length}`;
+  const item = questions[currentIndex];
+  answers.innerHTML = "";
+  question.innerHTML = item.question;
+
+  item.answers.forEach((answer) => {
+    const div = document.createElement("div");
+
+    div.innerHTML = `
+    <button class="answer" data-correct="${answer.correct}">
+      ${answer.option}
+    </button>
+    `;
+
+    answers.appendChild(div);
+  });
+
+  document.querySelectorAll("#respostas").forEach((item) => {
+    item.addEventListener("click", nextQuestion);
+  });
+}
+
+loadQuestion();
