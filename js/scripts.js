@@ -245,3 +245,258 @@ function loadQuestion() {
 }
 
 loadQuestion();
+
+//fase 2
+
+const question2 = document.getElementById("perguntas2");
+const answers2 = document.getElementById("respostas2");
+const qtd2 = document.getElementById("qtd2");
+const txtFinish2 = document.querySelector(".control2 span");
+const content2 = document.querySelector(".conteiner2");
+const contentFinish2 = document.querySelector(".control2");
+const btnRestart2 = document.querySelector(".control2 button");
+
+const questions2 = [
+  {
+    question: "Se a proposição “Se Lucca é responsável, então Sarita dirige bem” é falsa, é possível concluir que",
+    answers: [
+      { option: "Lucca é responsável e Sarita não dirige bem.", correct: true },
+      { option: "Lucca não é responsável e Sarita dirige bem.", correct: false },
+      { option: "Lucca dirige bem e Sarita não é responsável.", correct: false },
+    ],
+  },
+  {
+    question: "Considere verdadeiras as seguintes sentenças simples: p = Maria recebeu a correspondência na sexta-feira. q = Maria protocolou a correspondência na sexta-feira. Assinale a alternativa que apresenta uma sentença composta falsa para (¬p∧q).",
+    answers: [
+      { option: "Maria recebeu ou protocolou a correspondência na sexta-feira.", correct: false },
+      { option: "Maria não recebeu, mas protocolou a correspondência na sexta-feira.", correct: true },
+      { option: "Maria recebeu e protocolou a correspondência na sexta-feira.", correct: false },
+    ],
+  },
+];
+
+let currentIndex2 = 0;
+let questionsCorrect2 = 0; 
+
+btnRestart2.onclick = () => {
+  content2.style.display = "flex";
+  contentFinish2.style.display = "none";
+
+  currentIndex2 = 0;
+  questionsCorrect2 = 0;
+  loadQuestion2();
+};
+
+function nextQuestion2(event) {
+  if (event.target.getAttribute("data-correct") === "true") {
+    questionsCorrect2++;
+  }
+
+  if (currentIndex2 < questions2.length - 1) {
+    currentIndex2++;
+    loadQuestion2();
+  } else {
+    finish2();
+  }
+}
+
+function finish2() {
+  txtFinish2.innerHTML = `você acertou ${questionsCorrect2} de ${questions2.length}`;
+  content2.style.display = "none";
+  contentFinish2.style.display = "flex";
+}
+
+function loadQuestion2() {
+  qtd2.innerHTML = `${currentIndex2 + 1}/${questions2.length}`;
+  const item2 = questions2[currentIndex2];
+  answers2.innerHTML = "";
+  question2.innerHTML = item2.question;
+
+  item2.answers.forEach((answer) => {
+    const div2 = document.createElement("div");
+
+    div2.innerHTML = `
+    <button class="answer" data-correct="${answer.correct}">
+      ${answer.option}
+    </button>
+    `;
+
+    answers2.appendChild(div2);
+  });
+
+  document.querySelectorAll("#respostas2").forEach((item2) => {
+    item2.addEventListener("click", nextQuestion2);
+  });
+}
+
+loadQuestion2();
+
+//fase 3
+
+const question3 = document.getElementById("perguntas3");
+const answers3 = document.getElementById("respostas3");
+const qtd3 = document.getElementById("qtd3");
+const txtFinish3 = document.querySelector(".control3 span");
+const content3 = document.querySelector(".conteiner3");
+const contentFinish3 = document.querySelector(".control3");
+const btnRestart3 = document.querySelector(".control3 button");
+
+const questions3 = [
+  {
+    question: "Se a proposição “Se Lucca é responsável, então Sarita dirige bem” é falsa, é possível concluir que",
+    answers: [
+      { option: "Lucca é responsável e Sarita não dirige bem.", correct: true },
+      { option: "Lucca não é responsável e Sarita dirige bem.", correct: false },
+      { option: "Lucca dirige bem e Sarita não é responsável.", correct: false },
+    ],
+  },
+  {
+    question: "Considere verdadeiras as seguintes sentenças simples: p = Maria recebeu a correspondência na sexta-feira. q = Maria protocolou a correspondência na sexta-feira. Assinale a alternativa que apresenta uma sentença composta falsa para (¬p∧q).",
+    answers: [
+      { option: "Maria recebeu ou protocolou a correspondência na sexta-feira.", correct: false },
+      { option: "Maria não recebeu, mas protocolou a correspondência na sexta-feira.", correct: true },
+      { option: "Maria recebeu e protocolou a correspondência na sexta-feira.", correct: false },
+    ],
+  },
+];
+
+let currentIndex3 = 0;
+let questionsCorrect3 = 0; 
+
+btnRestart3.onclick = () => {
+  content3.style.display = "flex";
+  contentFinish3.style.display = "none";
+
+  currentIndex3 = 0;
+  questionsCorrect3 = 0;
+  loadQuestion3();
+};
+
+function nextQuestion3(event) {
+  if (event.target.getAttribute("data-correct") === "true") {
+    questionsCorrect3++;
+  }
+
+  if (currentIndex3 < questions3.length - 1) {
+    currentIndex3++;
+    loadQuestion3();
+  } else {
+    finish3();
+  }
+}
+
+function finish3() {
+  txtFinish3.innerHTML = `você acertou ${questionsCorrect3} de ${questions3.length}`;
+  content3.style.display = "none";
+  contentFinish3.style.display = "flex";
+}
+
+function loadQuestion3() {
+  qtd3.innerHTML = `${currentIndex3 + 1}/${questions3.length}`;
+  const item3 = questions3[currentIndex3];
+  answers3.innerHTML = "";
+  question3.innerHTML = item3.question;
+
+  item3.answers.forEach((answer) => {
+    const div3 = document.createElement("div");
+
+    div3.innerHTML = `
+    <button class="answer" data-correct="${answer.correct}">
+      ${answer.option}
+    </button>
+    `;
+
+    answers3.appendChild(div3);
+  });
+
+  document.querySelectorAll("#respostas3").forEach((item3) => {
+    item3.addEventListener("click", nextQuestion3);
+  });
+}
+
+loadQuestion3();
+
+//fase 4
+
+const question4 = document.getElementById("perguntas4");
+const answers4 = document.getElementById("respostas4");
+const qtd4 = document.getElementById("qtd4");
+const txtFinish4 = document.querySelector(".control4 span");
+const content4 = document.querySelector(".conteiner4");
+const contentFinish4 = document.querySelector(".control4");
+const btnRestart4 = document.querySelector(".control4 button");
+
+const questions4 = [
+  {
+    question: "Se a proposição “Se Lucca é responsável, então Sarita dirige bem” é falsa, é possível concluir que",
+    answers: [
+      { option: "Lucca é responsável e Sarita não dirige bem.", correct: true },
+      { option: "Lucca não é responsável e Sarita dirige bem.", correct: false },
+      { option: "Lucca dirige bem e Sarita não é responsável.", correct: false },
+    ],
+  },
+  {
+    question: "Considere verdadeiras as seguintes sentenças simples: p = Maria recebeu a correspondência na sexta-feira. q = Maria protocolou a correspondência na sexta-feira. Assinale a alternativa que apresenta uma sentença composta falsa para (¬p∧q).",
+    answers: [
+      { option: "Maria recebeu ou protocolou a correspondência na sexta-feira.", correct: false },
+      { option: "Maria não recebeu, mas protocolou a correspondência na sexta-feira.", correct: true },
+      { option: "Maria recebeu e protocolou a correspondência na sexta-feira.", correct: false },
+    ],
+  },
+];
+
+let currentIndex4 = 0;
+let questionsCorrect4 = 0; 
+
+btnRestart4.onclick = () => {
+  content4.style.display = "flex";
+  contentFinish4.style.display = "none";
+
+  currentIndex4 = 0;
+  questionsCorrect4 = 0;
+  loadQuestion4();
+};
+
+function nextQuestion4(event) {
+  if (event.target.getAttribute("data-correct") === "true") {
+    questionsCorrect4++;
+  }
+
+  if (currentIndex4 < questions4.length - 1) {
+    currentIndex4++;
+    loadQuestion4();
+  } else {
+    finish4();
+  }
+}
+
+function finish4() {
+  txtFinish4.innerHTML = `você acertou ${questionsCorrect4} de ${questions4.length}`;
+  content4.style.display = "none";
+  contentFinish4.style.display = "flex";
+}
+
+function loadQuestion4() {
+  qtd4.innerHTML = `${currentIndex4 + 1}/${questions4.length}`;
+  const item4 = questions4[currentIndex4];
+  answers4.innerHTML = "";
+  question4.innerHTML = item4.question;
+
+  item4.answers.forEach((answer) => {
+    const div4 = document.createElement("div");
+
+    div4.innerHTML = `
+    <button class="answer" data-correct="${answer.correct}">
+      ${answer.option}
+    </button>
+    `;
+
+    answers4.appendChild(div4);
+  });
+
+  document.querySelectorAll("#respostas4").forEach((item4) => {
+    item4.addEventListener("click", nextQuestion4);
+  });
+}
+
+loadQuestion4();
