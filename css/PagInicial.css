@@ -274,3 +274,26 @@ h1{
 .fases {
     display: none;
 }
+/* personalização do modal principal  */
+#guia-cont {
+    width: 888px;
+    background-color: #464242;
+    color: #f0f0f0;
+    border-radius: 40px;
+    background-image: url(backgroundfases.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-color: #888;
+    border: 8px solid rgba(6, 102, 212, 0.103);
+    border-radius: 20px;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 50%; 
+    font: 25pt;
+    
+    #text_guia{
+        font-size: 19px;
+    }
+}
