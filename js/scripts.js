@@ -205,6 +205,8 @@ btnRestart.onclick = () => {
 function nextQuestion(event) {
   if (event.target.getAttribute("data-correct") === "true") {
     questionsCorrect++;
+  }else{
+    finish();
   }
 
   if (currentIndex < questions.length - 1) {
@@ -219,6 +221,13 @@ function finish() {
   txtFinish.innerHTML = `você acertou ${questionsCorrect} de ${questions.length}`;
   content.style.display = "none";
   contentFinish.style.display = "flex";
+  if(questionsCorrect == 2){
+    let img = document.getElementById("img1")
+    img.src = "./img/tudook.jpg"
+  }else{
+    let img = document.getElementById("img1")
+    img.src = "./img/explosao.jpeg"
+  }
 }
 
 function loadQuestion() {
@@ -290,6 +299,8 @@ btnRestart2.onclick = () => {
 function nextQuestion2(event) {
   if (event.target.getAttribute("data-correct") === "true") {
     questionsCorrect2++;
+  }else{
+    finish2();
   }
 
   if (currentIndex2 < questions2.length - 1) {
@@ -304,6 +315,13 @@ function finish2() {
   txtFinish2.innerHTML = `você acertou ${questionsCorrect2} de ${questions2.length}`;
   content2.style.display = "none";
   contentFinish2.style.display = "flex";
+  if(questionsCorrect2 == 2){
+    let img = document.getElementById("img2")
+    img.src = "./img/tudook.jpg"
+  }else{
+    let img = document.getElementById("img2")
+    img.src = "./img/explosao.jpeg"
+  }
 }
 
 function loadQuestion2() {
@@ -375,6 +393,8 @@ btnRestart3.onclick = () => {
 function nextQuestion3(event) {
   if (event.target.getAttribute("data-correct") === "true") {
     questionsCorrect3++;
+  }else{
+    finish3();
   }
 
   if (currentIndex3 < questions3.length - 1) {
@@ -389,6 +409,13 @@ function finish3() {
   txtFinish3.innerHTML = `você acertou ${questionsCorrect3} de ${questions3.length}`;
   content3.style.display = "none";
   contentFinish3.style.display = "flex";
+  if(questionsCorrect3 == 2){
+    let img = document.getElementById("img3")
+    img.src = "./img/tudook.jpg"
+  }else{
+    let img = document.getElementById("img3")
+    img.src = "./img/explosao.jpeg"
+  }
 }
 
 function loadQuestion3() {
@@ -460,6 +487,8 @@ btnRestart4.onclick = () => {
 function nextQuestion4(event) {
   if (event.target.getAttribute("data-correct") === "true") {
     questionsCorrect4++;
+  }else{
+    finish4();
   }
 
   if (currentIndex4 < questions4.length - 1) {
@@ -474,6 +503,13 @@ function finish4() {
   txtFinish4.innerHTML = `você acertou ${questionsCorrect4} de ${questions4.length}`;
   content4.style.display = "none";
   contentFinish4.style.display = "flex";
+  if(questionsCorrect4 == 2){
+    let img = document.getElementById("img4")
+    img.src = "./img/tudook.jpg"
+  }else{
+    let img = document.getElementById("img4")
+    img.src = "./img/explosao.jpeg"
+  }
 }
 
 function loadQuestion4() {

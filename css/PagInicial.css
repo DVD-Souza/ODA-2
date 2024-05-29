@@ -229,6 +229,12 @@ h1{
     cursor: pointer;
 }
 
+.astronauta {
+    margin-left: 50%;
+    width: 20%;
+    height: 20%;
+}
+
 /* Tamanho de tela pequeno */
 @media only screen and (max-width: 600px) {
     .basebg {
