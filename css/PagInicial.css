@@ -303,3 +303,83 @@ h1{
         font-size: 19px;
     }
 }
+/* estilos dos modais das perguntas  */
+#fase-1{
+    background-image: url(background/marte.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #888;
+    background-color: #464242;
+    color: #f0f0f0;
+    border-radius: 40px;
+    width: 888px;
+    border: 8px solid rgba(6, 102, 212, 0.103);
+    border-radius: 20px;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 50%; 
+    font: 25pt;
+}
+#fase-2{
+    background-image: url(background/pluto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #888;
+    background-color: #464242;
+    color: #f0f0f0;
+    border-radius: 40px;
+    width: 888px;
+    border: 8px solid rgba(6, 102, 212, 0.103);
+    border-radius: 20px;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 50%; 
+    font: 25pt;
+}
+#fase-3{
+    background-image: url(background/netuno.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #888;
+    background-color: #464242;
+    color: #f0f0f0;
+    border-radius: 40px;
+    width: 888px;
+    border: 8px solid rgba(6, 102, 212, 0.103);
+    border-radius: 20px;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 50%; 
+    font: 25pt;
+}
+#fase-4{
+    background-image: url(background/mercurio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #888;
+    background-color: #464242;
+    color: #f0f0f0;
+    border: 8px solid rgba(6, 102, 212, 0.103);
+    border-radius: 20px;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 50%; 
+    font: 25pt;
+}
+.quiz-content{
+    border-radius: 20px;
+    z-index: 1000;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
