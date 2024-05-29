@@ -173,19 +173,17 @@ const btnRestart = document.querySelector(".quiz-control button");
 
 const questions = [
   {
-    question: "Se a proposição “Se Lucca é responsável, então Sarita dirige bem” é falsa, é possível concluir que",
+    question: "Qual é a negação da proposição 'P: A Terra é o terceiro planeta do sistema solar'?",
     answers: [
-      { option: "Lucca é responsável e Sarita não dirige bem.", correct: true },
-      { option: "Lucca não é responsável e Sarita dirige bem.", correct: false },
-      { option: "Lucca dirige bem e Sarita não é responsável.", correct: false },
+      { option: "¬P: A Terra não é o terceiro planeta do sistema solar", correct: true },
+      { option: "¬P: A Terra é o quarto planeta do sistema solar", correct: false },
     ],
   },
   {
-    question: "Considere verdadeiras as seguintes sentenças simples: p = Maria recebeu a correspondência na sexta-feira. q = Maria protocolou a correspondência na sexta-feira. Assinale a alternativa que apresenta uma sentença composta falsa para (¬p∧q).",
+    question: "Se 'P: O sol é uma estrela' e 'Q: A lua é um satélite natural', qual é a proposição 'P → Q'?",
     answers: [
-      { option: "Maria recebeu ou protocolou a correspondência na sexta-feira.", correct: false },
-      { option: "Maria não recebeu, mas protocolou a correspondência na sexta-feira.", correct: true },
-      { option: "Maria recebeu e protocolou a correspondência na sexta-feira.", correct: false },
+      { option: "Se a lua é um satélite natural, então o sol é uma estrela.", correct: false },
+      { option: "Se o sol é uma estrela, então a lua é um satélite natural.", correct: true },
     ],
   },
 ];
@@ -267,19 +265,17 @@ const btnRestart2 = document.querySelector(".control2 button");
 
 const questions2 = [
   {
-    question: "Se a proposição “Se Lucca é responsável, então Sarita dirige bem” é falsa, é possível concluir que",
+    question: " Se 'P: A Via Láctea é uma galáxia espiral' e 'Q: Marte é um planeta gasoso', qual é a proposição 'P ∧ Q'?",
     answers: [
-      { option: "Lucca é responsável e Sarita não dirige bem.", correct: true },
-      { option: "Lucca não é responsável e Sarita dirige bem.", correct: false },
-      { option: "Lucca dirige bem e Sarita não é responsável.", correct: false },
+      { option: "A Via Láctea é uma galáxia espiral e Marte é um planeta gasoso ", correct: true },
+      { option: "A Via Láctea não é uma galáxia espiral e Marte não é um planeta gasoso ", correct: false },
     ],
   },
   {
-    question: "Considere verdadeiras as seguintes sentenças simples: p = Maria recebeu a correspondência na sexta-feira. q = Maria protocolou a correspondência na sexta-feira. Assinale a alternativa que apresenta uma sentença composta falsa para (¬p∧q).",
+    question: "Se 'P: Júpiter é o maior planeta do sistema solar' e 'Q: Saturno tem anéis', qual é a proposição 'P ∨ Q'?",
     answers: [
-      { option: "Maria recebeu ou protocolou a correspondência na sexta-feira.", correct: false },
-      { option: "Maria não recebeu, mas protocolou a correspondência na sexta-feira.", correct: true },
-      { option: "Maria recebeu e protocolou a correspondência na sexta-feira.", correct: false },
+      { option: " ", correct: false },
+      { option: "Júpiter é o maior planeta do sistema solar ou Saturno tem anéis ", correct: true },
     ],
   },
 ];
